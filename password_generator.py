@@ -18,21 +18,3 @@ def password_generator(amount, length, all):
 #     elif desition.lower() == 'no':
 #         desition = False
 #     return desition
-
-# def add_uppercases(desition, uppercase_letters):
-#     if desition.lower() == 'yes':
-#         uppercase = True
-#         all = all + uppercase_letters
-#         #print(all) 
-#     elif desition.lower() == 'no':
-#         desition = False
-#     return desition
-
-# def add_lowercases(desition, lowercase_letters):
-#     if desition.lower() == 'yes':
-#         lowercase = True
-#         all = all +  lowercase_letters
-#         #print(all) 
-#     elif desition.lower() == 'no':
-#         desition = False
-#     return desition

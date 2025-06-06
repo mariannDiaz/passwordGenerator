@@ -31,8 +31,8 @@ while(looping == True):
     amount = int(input("Insert the amount of passwords you want ot generate: "))
 
     menu_option = int(input("\nChoose an option:\n"
-                            "1. Get a System-generated password"
-                            "\n2. Make a customized password"
+                            "1. Get a System-generated password."
+                            "\n2. Make a customized password."
                             "\nInsert your option here: "))
 
     if (menu_option < 1 ) and (menu_option > 2):
@@ -44,7 +44,25 @@ while(looping == True):
         looping = False
 
     elif menu_option == 2:
-        
+        submenu_option = int(input("\nChoose an option:\n"
+                                   "1. Get a random special word in your password."
+                                   "\n2. Insert a string to customize your password."
+                                   "\nInsert your option here: "))
+        if (submenu_option < 1 ) and (submenu_option > 2):
+            print("Invalid option. Try again!")
+            break
+        elif submenu_option == 1:
+            csv_file = 'random_words.csv'
+            # Opening the file and reading it are separate steps in Python
+            with open(csv_file, mode= 'r') as infile: # Check open() documentation
+                reader = csv.reader(infile) # Processes lines in the given csv file
+                data = list(reader) # Puts lines of CSV into a list
+                data = str(data)
+                #all += data #+ symbols + digits + lowercase_letters + uppercase_letters
+                system_generated_password = password_generator(amount, length, data)
+                looping = False
+        #elif submenu_option == 2:
+
 
 
 
