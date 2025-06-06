@@ -18,8 +18,6 @@ uppercase, lowercase, numbers, symbs = True, True, True, True
 
 all = ''
 
-menu_option = 0
-
 print("\nWelcome to The Password Generator!\n")
 
 looping = True
@@ -32,18 +30,21 @@ while(looping == True):
 
     amount = int(input("Insert the amount of passwords you want ot generate: "))
 
-    menu_option = int(input("Choose an option:\n"
-                            "1. Get a System-generated password",
-                            "2. Make a customized password"
+    menu_option = int(input("\nChoose an option:\n"
+                            "1. Get a System-generated password"
+                            "\n2. Make a customized password"
                             "\nInsert your option here: "))
 
-    if menu_option != 1 or 2:
+    if (menu_option < 1 ) and (menu_option > 2):
         print("Invalid option. Try again!")
         break
     elif menu_option == 1:
         all += symbols + digits + lowercase_letters + uppercase_letters
         system_generated_password = password_generator(amount, length, all)
-    #elif menu_option == 2:
+        looping = False
+
+    elif menu_option == 2:
+        
 
 
 

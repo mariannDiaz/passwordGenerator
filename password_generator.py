@@ -4,7 +4,8 @@ import csv
 def password_generator(amount, length, all):
     for x in range(amount):
         password = "".join(list(random.choices(all, k=length)))
-    return password
+        print(password, "\n")
+
 
 # def add_symbols(symbols, all):
 #         all += symbols
