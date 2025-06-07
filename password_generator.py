@@ -1,5 +1,4 @@
 import random
-import csv
 
 def password_generator(amount, length, all):
     for x in range(amount):

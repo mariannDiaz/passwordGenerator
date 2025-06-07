@@ -61,7 +61,13 @@ while(looping == True):
                 #all += data #+ symbols + digits + lowercase_letters + uppercase_letters
                 system_generated_password = password_generator(amount, length, data)
                 looping = False
-        #elif submenu_option == 2:
+        elif submenu_option == 2:
+            input_special_str = input("Insert your special string: ")
+            #sub_string = input_special_str[0:5]
+
+            all += symbols + digits + lowercase_letters + uppercase_letters #+ sub_string
+            system_generated_password = password_generator(amount, length, all)
+            looping = False
 
 
 
