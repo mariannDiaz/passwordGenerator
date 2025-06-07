@@ -1,6 +1,6 @@
 # Main (MANAGER CLASS)
 
-import random
+import secrets
 import csv
 from password_generator import *
 
@@ -18,7 +18,7 @@ uppercase, lowercase, numbers, symbs = True, True, True, True
 
 all = ''
 
-print("\nWelcome to The Password Generator!\n")
+print("\nWelcome to The Password Generator!")
 
 looping = True
 
@@ -26,7 +26,7 @@ while(looping == True):
 
     #^^^^^^^^^^^^^^^^^^^^^^^^ USER INPUT ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
 
-    length = int(input("Insert the character lenght you want: "))
+    length = int(input("\nInsert the character lenght you want: "))
 
     amount = int(input("Insert the amount of passwords you want ot generate: "))
 
@@ -35,9 +35,9 @@ while(looping == True):
                             "\n2. Make a customized password."
                             "\nInsert your option here: "))
 
-    if (menu_option < 1 ) and (menu_option > 2):
+    if (menu_option < 1 ) or (menu_option > 2):
         print("Invalid option. Try again!")
-        break
+        
     elif menu_option == 1:
         all += symbols + digits + lowercase_letters + uppercase_letters
         system_generated_password = password_generator(amount, length, all)
