@@ -40,7 +40,7 @@ def main():
                     print("The lenght must be a positive number.")
                     """
                     
-                    In a loop, the continue keyword means: "Stop what you're doing in this current run of the loop, 
+                    In a loop, the 'continue' keyword means: "Stop what you're doing in this current run of the loop, 
                     skip everything else below me, and jump immediately back to the top of the loop to start the next run."
 
                     """
