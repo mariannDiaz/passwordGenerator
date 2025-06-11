@@ -1,11 +1,14 @@
 Pets,Plants,Places,Countries,Food
-Mochi,Monstera_Deliciosa,Machu_Picchu,Peru,Jollof_Rice
+Mochi,Monstera_Deliciosa,Machu-Picchu,Peru,Jollof-Rice
 Bubbles,Lavender,Petra,Jordan,Paella
 Gizmo,Aloe_Vera,Santorini,Greece,Falafel
-Luna,Snake_Plant,Great Wall,China,Pad_Thai
+Luna,Snake_Plant,Great Wall,China,Pad-Thai
 Pickles,Pothos,Mount_Fuji,Japan,Ramen
 Taco,Bamboo_Palm,Taj_Mahal,India,Butter_Chicken
 Pudding,Venus_Flytrap,Niagara_Falls,Canada,Poutine
 Noodle,Jade_Plant,Eiffel_Tower,France,Lasagna
-Willow,Hibiscus,Serengeti,Tanzania,Banh_Mi
-Ziggy,Fiddle_Leaf_Fig,Grand_Canyon,USA,Tacos_al_Pastor
+Willow,Hibiscus,Serengeti,Tanzania,Banh-Mi,Igaun
+Ziggy,Fiddle,Leaf_Fig,Grand_Canyon,USA,Tacos,al_Pastor
+apple,bicycle,galaxy,mountain,serendipity,ephemeral,luminous,ocean,
+whimsical,enigma,Shufflebottom,Quackenbush,Kviatkouski,Papageorgiou,Vercingetorix
+Zvanarjov,Macquarrie,Tchaikovsky,Martensson,O'Shaughnessy,Yaxley,Bevilacqua
