@@ -9,30 +9,25 @@ def get_words_from_CSV(filename):
 
     """
     try:
-        # open(filename, ...): This is the function that opens the file.
+        # open(filename): This function opens the file.
         # mode='r': Opens the file in read-only mode. You can only look at the data, not change it!
-        # encoding='utf-8': This specifies the character encoding...
-        # ...which is a standard way to ensure text and symbols are read correctly.
+        # encoding='utf-8': makes sure characters are interpreted correctly
         # as infile: The opened file object is temporarily named infile.
-        # with ...: This with statement is very useful because it guarantees the file will be automatically closed...
-        # ... when the program is done with it, even if errors occur.
+        # with: guarantees the file will be automatically closed  when the program is done with it, even if errors occur.
         with open(filename, mode='r', encoding= 'utf-8') as infile:
             # open(): It doesn't understand that commas or new lines in your CSV have any special meaning.
             # This is where csv.reader() comes in.
             # Take the raw text stream (infile) and interpret it according to the rules of the CSV format.
-            # It knows that commas are used to separate individual values (cells)...
-            # ...and that new lines are used to separate records (rows).
+            # It knows that commas separate individual values (cells) and that new lines are used to separate rows.
             reader = csv.reader(infile)
-            # We will use this list to store all the words we find in the file.
-            # So you have a complete list of all the words at the end.
+            # This list will store all the words we find in the file.
             # (CONTAINER) Bowl!
             final_word_list = []
             # Loops through each row in the CSV file.
             for row in reader:
                 # Loops through each word in the current row.
                 for word in row:
-                    # Add th word to ur lust if it's not empty.
-                    # Prevents empty entries in our final list.
+                    # Adds the word to your list if it's not empty.
                     if word:
                         final_word_list.append(word)
 
