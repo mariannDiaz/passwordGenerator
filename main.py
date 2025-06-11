@@ -1,69 +1,84 @@
-# We now import all the "expert" functions from our generator toolkit file.
-from password_generator import password_generator, get_words_from_csv, generate_memorable_password
+from password_generator import password_generator, generate_memorable_password, get_words_from_CSV
 
-# --- Character Sets (Constants) ---
-# These are the building blocks for our random passwords.
-UPPERCASE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-LOWERCASE_LETTERS = "abcdefghijklmnopqrstuvwxyz"
-DIGITS = "0123456789"
-SYMBOLS = "!@#$%^&*()-_=+~/\\[]{.}?,:;"
-
+# This variables are the building blocks for our passwords
+uppercare_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lowercase_letters = "abcdefghijklmnopqrstuvwxyz"
+digits = "0123456789"
+symbols = "!@#$%^&*()-_=+~/\\[]{.}?,:;"
 
 def main():
-    """a
-    Main function to run the password generator application.
-    This function handles all user interaction.
     """
+
+    Main function to run the epassword generator application.
+    This function handles all user interaction.
+
+    """
+
     print("\nWelcome to The Password Generator!\n")
 
-    while True:
+    is_running = True
+
+    while is_running:
         try:
-            # --------------------------------------------- Get User Input ---------------------------------------#
-            length_str = input("Insert the character length (or press Enter for a memorable passphrase): ")
-            
-            # ------------------------ Call the Correct Expert Function ----------------------#
-            if not length_str:
-                # User wants a memorable passphrase.
-                amount = int(input("Insert the amount of passphrases you want to generate: "))
-                words = get_words_from_csv('random_words.csv')
+            # Get user input
+            lenght = input("insert the character lenght or press Enter for a memorable-password: ")
+
+            # ----------------------- Call the selected Expert Function ---------------------------#
+
+            # This is the way to check if the user just pressed Enter.
+            # It explicitly checks if the string is empty.
+            # "If the user did not type anything and just pressed Enter, then..."*
+            if lenght == "":
+                #---------------------- Generate & print the memorable password(s) -------------------------#
+                amount = int(input("Insert the amount of passwords you want to generate: "))
+                words = get_words_from_CSV("random_words.csv")
                 generate_memorable_password(words, amount)
             else:
-                # User wants a random password.
-                length = int(length_str)
-                if length <= 0:
-                    print("Length must be a positive number.")
+                # User wants a random password
+                lenght = int(lenght)
+                if lenght <= 0:
+                    print("The lenght must be a positive number.")
+                    """
+                    
+                    In a loop, the continue keyword means: "Stop what you're doing in this current run of the loop, 
+                    skip everything else below me, and jump immediately back to the top of the loop to start the next run."
+
+                    """
+                    # It's a way to bail out of a single, invalid attempt and start fresh without exiting the whole program
                     continue
-                
+
                 amount = int(input("Insert the amount of passwords you want to generate: "))
-                
-                # --- Build the Character Set for the random password ---
+
+                #------------------- Build the Character Set for the random password -------------------#
                 character_set = ""
-                if input("Include uppercase letters? (y/n): ").lower() == 'y':
-                    character_set += UPPERCASE_LETTERS
-                if input("Include lowercase letters? (y/n): ").lower() == 'y':
-                    character_set += LOWERCASE_LETTERS
-                if input("Include numbers? (y/n): ").lower() == 'y':
-                    character_set += DIGITS
-                if input("Include symbols? (y/n): ").lower() == 'y':
-                    character_set += SYMBOLS
-                
-                if not character_set:
-                    print("\nError: You must select at least one character type. Please try again.\n")
+
+                if input("Do you want to include uppercase letters? (y/n): ").lower() == 'y':
+                    character_set += uppercare_letters
+                if input("Do you want to include lowercase letters? (y/n): ").lower() == 'y':
+                    character_set += lowercase_letters
+                if input("Do you want to include numbers? (y/n): ").lower() == 'y':
+                    character_set += digits
+                if input("Do you want to include symbols? (y/n): ").lower() == 'y':
+                    character_set += symbols
+
+                # This if statement checks if the character_set string is still empty.    
+                if character_set == "":
+                    print("\nError: You must select at least one charater type.\nPlease, try again.\n")
+                    # It's a way to bail out of a single, invalid attempt and start fresh without exiting the whole program
+                    """ 
+                    'continue' jumps right back to the top of the loop,
+                    where it will once again ask the user to input a password length.
+
+                    """
                     continue
-                
-                # --- Generate and Print Password ---
-                password_generator(amount, length, character_set)
 
+                #------------------------- Generate & print the random password(s) ----------------------------#
+                password_generator(amount, lenght, character_set)
+            
         except ValueError:
-            print("\nError: Invalid input. Please enter a number for length and amount.\n")
+            print("\nError. Invalid input. Please enter a number for lenght and amount.\n")
         except Exception as e:
-            print(f"An unexpected error occurred: {e}")
-
-        # --- Ask to Continue ---
-        if input("\nGenerate another password? (y/n): ").lower() != 'y':
-            break
-
-    print("\nThank you for using The Password Generator!")
+            print(f"\nAn unexpected error has occurred: {e}\n")
 
 
 # This ensures the main() function is called only when you run this script.
