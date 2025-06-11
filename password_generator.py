@@ -64,7 +64,7 @@ def password_generator(amount, lenght, character_set):
     from agiven set of characters.
 
     """
-    print(f"\n-----Generating {amount} passwords(s) of length {lenght}-----\n")
+    print(f"\n------ Generating {amount} passwords(s) of length {lenght} -------\n")
 
     # This outer loop runs once for each password yo want to create
     for _ in range(amount):
@@ -95,7 +95,7 @@ def generate_memorable_password(word_list, amount):
         # Prevents the rest of code form running, this can couse an error if the word_list is empty
         return
     
-    print(f"\n-------- Generating {amount} memorable passphrase(s) --------\n")
+    print(f"\n--------- Generating {amount} memorable passphrase(s) --------\n")
     for _ in range(amount):
         # Randomly pick one item from the list
         # [3, 4]. This means each passphrase will be made of either 3 or 4 words.

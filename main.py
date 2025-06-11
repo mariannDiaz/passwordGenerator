@@ -21,7 +21,7 @@ def main():
     while is_running:
         try:
             # Get user input
-            lenght = input("insert the character lenght or press Enter for a memorable-password: ")
+            lenght = input("Insert the character lenght or press Enter for a memorable-password: ")
 
             # ----------------------- Call the selected Expert Function ---------------------------#
 
