@@ -51,7 +51,6 @@ def get_words_from_CSV(filename):
 
     '''
 
-
 def password_generator(amount, lenght, character_set):
     """
 
