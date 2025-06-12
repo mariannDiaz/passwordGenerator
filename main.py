@@ -1,4 +1,4 @@
-from password_generator import password_generator, generate_memorable_password, get_words_from_CSV
+from password_generator import *
 
 # This variables are the building blocks for our passwords
 uppercare_letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -9,7 +9,7 @@ symbols = "!@#$%^&*()-_=+~/\\[]{.}?,:;"
 def main():
     """
 
-    Main function to run the epassword generator application.
+    Main function to run the password generator application.
     This function handles all user interaction.
 
     """
