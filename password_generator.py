@@ -115,7 +115,7 @@ def generate_memorable_password(word_list, amount):
         """
         Transforms a sentence into a stronger password by substituting
         some characters with numbers, symbols, and different cases.
-        
+
         """
     # A dictionary for common "leet speak" substitutions
     substitutions = {
