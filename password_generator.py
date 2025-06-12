@@ -111,3 +111,53 @@ def generate_memorable_password(word_list, amount):
 
     print("\n---------------------------------------------------\n")
     
+    def schneier_password(sentence):
+        """
+        Transforms a sentence into a stronger password by substituting
+        some characters with numbers, symbols, and different cases.
+        
+        """
+    # A dictionary for common "leet speak" substitutions
+    substitutions = {
+        'a': '@', 'e': '3', 'o': '0', 's': '$',
+        'i': '!', 'l': '1', 't': '7'
+    }
+    
+    words = sentence.split()
+    new_words_list = []
+
+    # Loop through each word from the user's sentence
+    for word in words:
+        new_word_chars = []
+        # Loop through each character in the current word
+        for char in word:
+            # With a 50% chance, we do nothing and just keep the original character.
+            # This is a "guard clause" that simplifies the logic below.
+            if not secrets.choice([True, False]):
+                new_word_chars.append(char)
+                continue # Move to the next character in the word
+
+            # If we passed the check above, we will modify the character.
+            # First, check if a "leet speak" substitution is possible.
+            if char.lower() in substitutions:
+                new_word_chars.append(substitutions[char.lower()])
+            # If it's a letter but not in our substitution map, change its case.
+            elif char.isalpha():
+                # 50% chance to make it uppercase, 50% for lowercase
+                if secrets.choice([True, False]):
+                    new_word_chars.append(char.upper())
+                else:
+                    new_word_chars.append(char.lower())
+            # If it's not a letter and can't be substituted, just keep it.
+            else:
+                new_word_chars.append(char)
+        
+        # Join the modified characters to form the new word
+        new_words_list.append("".join(new_word_chars))
+        
+    # Join the modified words with a hyphen to form the final password
+    password = "-".join(new_words_list)
+    
+    print("\n--- Your Transformed Password ---")
+    print(password)
+    print("---------------------------------")
