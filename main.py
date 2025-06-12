@@ -79,7 +79,7 @@ def main():
                     is_running = False
 
             else:
-                print("Invalid option, please try again.")
+                print("\nInvalid option, please try again.")
                 continue
 
 
