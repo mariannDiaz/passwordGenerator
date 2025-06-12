@@ -1,5 +1,5 @@
 # We now import all the "expert" functions from our generator toolkit file.
-from password_generator import password_generator, get_words_from_csv, generate_memorable_password, generate_schneier_password
+from password_generator import *
 
 # --- Character Sets (Constants) ---
 # These are the building blocks for our random passwords.
