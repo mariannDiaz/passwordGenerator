@@ -93,7 +93,7 @@ def main():
         if another != 'y':
             is_running = False
 
-    print("\nThank you for using The Password Generator!")
+    print("\nThank you for using The Password Generator!\nBye.")
 
 
 # This ensures the main() function is called only when you run this script.
