@@ -1,4 +1,3 @@
-# We now import all the "expert" functions from our generator toolkit file.
 from password_generator import *
 
 # --- Character Sets (Constants) ---
@@ -81,6 +80,7 @@ def main():
 
             else:
                 print("Invalid option, please try again.")
+                continue
 
 
         except ValueError:
