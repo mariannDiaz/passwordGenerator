@@ -79,7 +79,6 @@ def password_generator(amount, lenght, character_set):
 
 def generate_memorable_password(word_list, amount):
     """
-
     This method generates an "easy to remember" password using 3-4 random words and a number.
     
     """
@@ -124,7 +123,7 @@ def schneier_password(sentence):
         'two':'1', 'to': '2', 'for': '4', 'one': '1',
         'tree': 't3', 'three': '3', 'four': '4', 'five': '5',
         'six': '6', 'seven':'7', 'eight': '8', 'nine': '9',
-        'ten': '10', 'you': 'iu', 'yay': 'jai', 'at': '@'
+        'ten': '10', 'you': 'iu', 'yay': 'jai', 'at': '@',
     }
 
     words = sentence.split()
