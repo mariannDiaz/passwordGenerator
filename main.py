@@ -60,7 +60,7 @@ def main():
             elif choice == '2':
                 # User wants a memorable passphrase.
                 amount = int(input("Insert the amount of passphrases you want to generate: "))
-                words = get_words_from_csv('random_words.csv')
+                words = get_words_from_CSV('random_words.csv')
                 generate_memorable_password(words, amount)
 
                 another = input("\nGenerate another password? (y/n): ").lower()
