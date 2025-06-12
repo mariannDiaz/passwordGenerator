@@ -73,7 +73,7 @@ def main():
                 if not user_sentence:
                     print("You must enter a sentence.")
                     continue
-                generate_schneier_password(user_sentence)
+                schneier_password(user_sentence)
 
                 another = input("\nGenerate another password? (y/n): ").lower()
                 if another != 'y':
