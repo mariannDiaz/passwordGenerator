@@ -28,9 +28,11 @@ Main Challenges:
     5. The biggest challenge was to make this program user-friendly, so the user has better control over the results they expect.
 
 
-Details on how you tested that your project worked. For example, what inputs did you try to test it?
-Put your short reflection (1–2 paragraphs):
+Details:
 
-What did you learned overall? A password should not be hard to remember or easy to decode. This statement can be highly contradictory.
+    1. How you tested that your project worked. For example, what inputs did you try to test it?
+       Put your short reflection (1–2 paragraphs): 
+
+    2. What did you learned overall? A password should not be hard to remember or easy to decode. This statement can be highly contradictory.I  learned to balance both requiremnts in order to produce safe & memorable passwords.
 
 
