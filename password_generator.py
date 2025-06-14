@@ -58,8 +58,7 @@ def password_generator(amount, lenght, character_set):
     from agiven set of characters.
 
     """
-    print(f"\n------ Generating {amount} passwords(s) of length {lenght} -------\n")
-
+    print(f"\n--------- Generating {amount} passwords(s) of length {lenght} -----------\n")
     # This outer loop runs once for each password yo want to create
     for _ in range(amount):
         # Empty box (empty list) will store all the characters for one password at a time
@@ -74,8 +73,7 @@ def password_generator(amount, lenght, character_set):
         password = "".join(password_characters)
         print(password)
 
-    print("\n----------------------------------------------------\n")
-
+    print("\n------------------------------------------------------------\n")
 
 def generate_memorable_password(word_list, amount):
     """
@@ -88,7 +86,7 @@ def generate_memorable_password(word_list, amount):
         # Prevents the rest of code form running, this can couse an error if the word_list is empty
         return
     
-    print(f"\n--------- Generating {amount} memorable passphrase(s) --------\n")
+    print(f"\n----------- Generating {amount} memorable passphrase(s) -----------\n")
     for _ in range(amount):
         # Randomly pick one item from the list
         # [3, 4]. This means each passphrase will be made of either 3 or 4 words.
@@ -108,7 +106,7 @@ def generate_memorable_password(word_list, amount):
         passphrase = "-".join(chosen_words) + "-" + random_number
         print(passphrase)
 
-    print("\n---------------------------------------------------\n")
+    print("\n------------------------------------------------------------\n")
     
 def schneier_password(sentence):
     """
@@ -173,6 +171,6 @@ def schneier_password(sentence):
     # Join the modified words with a hyphen to form the final password
     password = "-".join(new_words_list)
 
-    print("\n------ Your Transformed Password ------\n")
+    print("\n--------------- Your Transformed Password -----------------\n")
     print(password)
-    print("----------------------------------------")
+    print("\n------------------------------------------------------------\n")
