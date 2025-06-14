@@ -171,6 +171,6 @@ def schneier_password(sentence):
     # Join the modified words with a hyphen to form the final password
     password = "-".join(new_words_list)
 
-    print("\n--------------- Your Transformed Password -----------------\n")
+    print("\n--------------- Your Transformed Password ------------------\n")
     print(password)
     print("\n------------------------------------------------------------\n")
