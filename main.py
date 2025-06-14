@@ -75,7 +75,7 @@ def main():
                 continue
 
         except ValueError:
-            print("\nError: Invalid input. Please enter a number for length and amount.\n")
+            print("\nError: Invalid input. Please enter a number for length and amount.")
         except Exception as e:
             print(f"\nAn unexpected error occurred: {e}")
 
