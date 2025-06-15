@@ -6,15 +6,15 @@
 ## 💫 The New Python Tool: secrets
 
   ▪️I used the secrets library to ensure that every selected
-     character in your password is safely managed through encryption/decryption. 
+    character in your password is safely managed through encryption/decryption. 
        
 
 ## 🗝️ Main features:
 This program can generate customized and safe passwords.
 
-    1. Generates a non-customized random password (let the system choose)
-    2. Generates a memorable passphrase (made of random words)
-    3. Generates a password from a sentence (Schneier's scheme)
+    1️⃣ Generates a non-customized random password (let the system choose)
+    2️⃣ Generates a memorable passphrase (made of random words)
+    3️⃣ Generates a password from a sentence (Schneier's scheme)
 
 ## 🗨️ Other features:
 
