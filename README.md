@@ -1,25 +1,24 @@
+# The Password Generator
 
 Name: Mariann Diaz
 
-The new Python feature: I used the secrets library to ensure every selected character in your password is safely managed through encryption/decryption.
+## The new Python tool:
 
-Project Description: The Password Generator
+I used the secrets library to ensure every selected character in your password is safely managed through encryption/decryption. This program can generate customized and safe passwords.
 
-This program can generate customized and safe passwords.
-
-It has three main features:
+## Main features:
 
     1. Generates a non-customized random password (let the sytem choose)
     2. Generates a memorable passphrase (made of random words)
     3. Generates a password from a sentence (Schneier's scheme)
 
-Other features:
+## Other features:
 
     - You can choose the length and types of characters you want to include in your desired password.
     - You can generate multiple passwords at once.
 
 
-Main Challenges:
+## Main Challenges:
 
     1. Opening, reading and correctly managing the random words in the CSV file.
     2. To fully understand how to use the secrets.choice() tool inside the context of my program.
@@ -28,7 +27,7 @@ Main Challenges:
     5. The biggest challenge was to make this program user-friendly, so the user has better control over the results they expect.
 
 
-Details:
+## Details:
 
     1. How you tested that your project worked. For example, what inputs did you try to test it?
        Put your short reflection (1–2 paragraphs): 
