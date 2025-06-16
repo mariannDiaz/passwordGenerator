@@ -94,8 +94,15 @@ def main():
         # ---------------- Ask to Continue --------------------- #
         another = input("\nGenerate another password? (y/n): ").lower()
         print("\n")
-        if another != 'y':
+        if another == 'n'.lower():
             is_running = False
+        elif another == 'y'.lower():
+            continue
+        else:
+            another = input("\nYour input is invalid.\n"
+            "Insert y to continue with the program or n to stop.\n" \
+            "Generate another password? (y/n): ").lower()
+            print("\n")
 
     print("\nThank you for using The Password Generator!\nBye.")
 
