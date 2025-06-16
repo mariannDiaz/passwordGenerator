@@ -71,8 +71,11 @@ def main():
             elif choice == '3':
                 # -------------- User wants to use Schneier's scheme ---------------- #
                 user_sentence = input("\nEnter a sentence to convert into a password: ")
-                if not user_sentence:
-                    print("Advice:\nWhite space does not count as a valid sentence.\nPlease, enter a valid sentence.")
+                if not user_sentence.strip():
+                    print("Advice: White space does not count as a valid sentence.\nPlease, enter a valid sentence.")
+                    continue
+                elif len(user_sentence) < 8:
+                    print("Advice: Your sentence must be at least 8 characters long.")
                     continue
                 schneier_password(user_sentence)
 
