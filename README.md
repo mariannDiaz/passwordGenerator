@@ -5,8 +5,7 @@
 
 ## 💫 The New Python Tool: secrets
 
-  ▪️I used the secrets library to ensure that every selected
-    character in your password is safely managed through cryptography. 
+  ▪️I used the secrets library to generate cryptographically secure random values. 
        
 
 ## 🗝️ Main features:
