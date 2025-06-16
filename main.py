@@ -31,16 +31,19 @@ def main():
                 # ----------- User wants a random password ------------- #
                 length = int(input("\nInsert the character length: "))
                 if length <= 0:
-                    print("Advice:\nLength must be a positive number.")
+                    print("\nAdvice:\nLength must be a positive number.")
+                    continue
                 elif length > 25:
-                    print("Advice:\nYour password length must be shorter than 25 characters.")
+                    print("\nAdvice:\nYour password length must be shorter than 25 characters.")
+                    continue
                 elif length < 8:
-                    print("Advice:\nYour password length must be longer or equal to 8 characters.")
+                    print("\nAdvice:\nYour password length must be longer or equal to 8 characters.")
                     continue
                 
                 amount = int(input("Insert the amount of passwords you want to generate: "))
                 if (amount < 1) or (amount > 35):
                     print("Advice:\nYou may create a minumun of 1 password \nor a maximum of 35 passwords at a time.")
+                    continue
                 
                 # ----- Build the Character Set for the random password ----- #
                 character_set = ""
@@ -97,12 +100,15 @@ def main():
         if another == 'n'.lower():
             is_running = False
         elif another == 'y'.lower():
-            continue
-        else:
+            is_running = True
+        elif (another != 'y'.lower()) or (another != 'n'.lower()):
             another = input("\nYour input is invalid.\n"
             "Insert y to continue with the program or n to stop.\n" \
             "Generate another password? (y/n): ").lower()
-            print("\n")
+            if another == 'n'.lower():
+                is_running = False
+            elif another == 'y'.lower():
+                is_running = True
 
     print("\nThank you for using The Password Generator!\nBye.")
 
