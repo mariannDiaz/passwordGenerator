@@ -31,10 +31,16 @@ def main():
                 # ----------- User wants a random password ------------- #
                 length = int(input("\nInsert the character length: "))
                 if length <= 0:
-                    print("Length must be a positive number.")
+                    print("Advice:\nLength must be a positive number.")
+                elif length > 25:
+                    print("Advice:\nYour password length must be shorter than 25 characters.")
+                elif length < 8:
+                    print("Advice:\nYour password length must be longer or equal to 8 characters.")
                     continue
                 
                 amount = int(input("Insert the amount of passwords you want to generate: "))
+                if (amount < 1) or (amount > 35):
+                    print("Advice:\nYou may create a minumun of 1 password \nor a maximum of 35 passwords at a time.")
                 
                 # ----- Build the Character Set for the random password ----- #
                 character_set = ""
@@ -56,6 +62,9 @@ def main():
             elif choice == '2':
                 # ------------------ User wants a memorable passphrase ------------------ #
                 amount = int(input("\nInsert the amount of passphrases you want to generate: "))
+                if (amount < 1) or (amount > 35):
+                    print("Advice:\nYou may create a minumun of 1 password \nor a maximum of 35 passwords at a time.")
+
                 words = get_words_from_CSV('random_words.csv')
                 generate_memorable_password(words, amount)
 
@@ -63,7 +72,7 @@ def main():
                 # -------------- User wants to use Schneier's scheme ---------------- #
                 user_sentence = input("\nEnter a sentence to convert into a password: ")
                 if not user_sentence:
-                    print("You must enter a sentence.")
+                    print("Advice:\nWhite space does not count as a valid sentence.\nPlease, enter a valid sentence.")
                     continue
                 schneier_password(user_sentence)
 
@@ -81,6 +90,7 @@ def main():
 
         # ---------------- Ask to Continue --------------------- #
         another = input("\nGenerate another password? (y/n): ").lower()
+        print("\n")
         if another != 'y':
             is_running = False
 
